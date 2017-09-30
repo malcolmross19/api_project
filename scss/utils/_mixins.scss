@@ -1,0 +1,8 @@
+// Mixins
+
+@mixin divbordr($topLeft, $topRight, $bottomLeft, $bottomRight) {
+  border-top-left-radius: $topLeft;
+  border-top-right-radius: $topRight;
+  border-bottom-left-radius: $bottomLeft;
+  border-bottom-right-radius: $bottomRight;
+}
