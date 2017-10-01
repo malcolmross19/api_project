@@ -5,8 +5,9 @@
   <title>API Project</title>
   <meta name="description" content="API Project">
   <meta name="author" content="Malcolm Ross">
-  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-
+  <link rel="stylesheet" href="css/main.css?v=1.0">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <!--[if lt IE 9]
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -22,10 +23,17 @@
         </ul>
       </nav>
     </header>
-    <div id=banner></div>
-    <div id=search>
-      <label for=character>Search for comics with your favorite Marvel character.</label>
-      <input type=text id=character />
+    <div id=banner>
+      <img src="images/comics.jpg" />
+      <div id="wrap">
+        <div id=search>
+          <!-- <label for=character>Search for comics with your favorite Marvel character.</label> -->
+          <input type=text id=searchTerm placeholder="Search for comics with your favorite Marvel characters.">
+          <button type="submit" id="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
     </div>
     <div id=searchResults></div>
     <div id=footer></div>
