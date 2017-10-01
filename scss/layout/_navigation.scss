@@ -1,0 +1,24 @@
+// Navigation
+
+nav {
+  background-color: black;
+  height: 50px;
+  margin-top: 0;
+  text-align: right;
+
+  ul {
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+
+    li {
+      display: inline-block;
+      margin: 0 .5em;
+      color: white;
+    }
+
+  }
+
+}
+
