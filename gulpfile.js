@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+md5 = require('js-md5');
 
 gulp.task('default', function() {
 

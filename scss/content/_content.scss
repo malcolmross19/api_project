@@ -1,7 +1,6 @@
 // Content
 
 #banner {
-  background-image: url("/images/comics.jpg"); // Photo by Mitch Rosen on Unsplash
   position: relative;
   height: 500px;
 
@@ -54,4 +53,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#searchResults {
+  display: inline-block;
+  width: 1200px;
+  background-color: white;
+}
+
+.comic {
+  display: inline-block;
+  margin: 10px;
+  width: 215px;
+  text-align: center;
 }
