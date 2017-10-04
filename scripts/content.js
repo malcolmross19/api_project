@@ -34,7 +34,7 @@ submit.addEventListener("click", function(e) {
 
             for (var i = 0; i < responseObject.data.results.length; i++) {
                 if(responseObject.data.results[i].comics.available > 0){
-                    comicsContent += '<div class=comic>';
+                    comicsContent += '<article class=comic>';
                     comicsContent += '<img src=' + responseObject.data.results[i].thumbnail.path + '.';
                     comicsContent += responseObject.data.results[i].thumbnail.extension + ' ';
                     comicsContent += 'alt=' + responseObject.data.results[i].name + ' />';
@@ -45,7 +45,7 @@ submit.addEventListener("click", function(e) {
                     } else {
                         comicsContent += responseObject.data.results[i].description + '</p></div>';
                     }
-                    comicsContent += '</div>';
+                    comicsContent += '</article>';
                 }
             }
 
