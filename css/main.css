@@ -1,4 +1,4 @@
-body {
+body, #searchResults {
   margin-left: auto;
   margin-right: auto; }
 
@@ -18,7 +18,7 @@ nav {
       color: white; }
 
 html {
-  background-color: #f7f7f7;
+  background-color: #c4c4c4;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   height: 100%; }
@@ -75,12 +75,35 @@ h3 {
   transform: translate(-50%, -50%); }
 
 #searchResults {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  text-align: center;
   width: 1200px;
+  margin: 0 auto; }
+
+#results {
   background-color: white; }
 
 .comic {
   display: inline-block;
-  margin: 10px;
-  width: 215px;
-  text-align: center; }
+  width: 350px;
+  height: auto;
+  text-align: center;
+  margin: 20px auto; }
+  .comic img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 250px; }
+
+#searchHeader {
+  display: none;
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #00B4CC; }
+  #searchHeader h2 {
+    display: inline-block;
+    padding-top: 10px;
+    margin: 0 auto; }
