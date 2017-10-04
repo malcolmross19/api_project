@@ -4,6 +4,7 @@ body, #searchResults {
 
 nav {
   background-color: black;
+  width: 1200px;
   height: 50px;
   margin-top: 0;
   text-align: right; }
@@ -32,6 +33,7 @@ h3 {
 
 #banner {
   position: relative;
+  width: 1200px;
   height: 500px; }
   #banner img {
     width: 1200px;
@@ -72,11 +74,15 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 #searchResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   vertical-align: middle;
   text-align: center;
   width: 1200px;
