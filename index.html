@@ -2,6 +2,7 @@
 <html lang=en>
 <head>
   <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>API Project</title>
   <meta name="description" content="API Project">
   <meta name="author" content="Malcolm Ross">
@@ -17,9 +18,9 @@
     <header>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -27,7 +28,6 @@
       <img src="images/comics.jpg" /> <!--Photo by Mitch Rosen on Unsplash-->
       <div id="wrap">
         <div id=search>
-          <!-- <label for=character>Search for comics with your favorite Marvel character.</label> -->
           <input type=text id=searchTerm placeholder="Search for comics with your favorite Marvel characters.">
           <button type="submit" id="searchButton">
             <i class="fa fa-search"></i>
@@ -39,7 +39,7 @@
       <div id=searchHeader>
         <h2>Search Results</h2>
       </div>
-      <div id=searchResults></div>
+      <section id=searchResults></section>
     </div>
     <div id=footer></div>
   </div>
