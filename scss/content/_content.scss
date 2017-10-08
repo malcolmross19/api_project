@@ -1,14 +1,49 @@
 // Content
 
+@mixin responsive($size) {
+  @if $size == small {
+    @media (min-width: 300px) { @content; }
+  }
+  @else if $size == medium {
+    @media (min-width: 600px) { @content; }
+  }
+  @else if $size == large {
+    @media (min-width: 800px) { @content; }
+  }
+}
+
+
+
 #banner {
   position: relative;
+  width: 1200px;
   height: 500px;
+  margin: 0;
+
+
+  @include responsive(small) {
+    width: 100%;
+  }
+
+  @include responsive(medium) {
+    width: 100%;
+  }
+
+  @include responsive(large) {
+    width: 100%;
+  }
 
   img {
     width: 1200px;
     height: 500px;
     opacity: .85;
+
+    @include responsive(small) {
+      width: 100%;
+    }
+
   }
+
 
 }
 
@@ -45,6 +80,12 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
+
+  img {
+    height: 90%;
+    width: 95%;
+    opacity: 1;
+  }
 }
 
 #wrap {
@@ -53,6 +94,23 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+
+  @include responsive(small) {
+    width: 60%;
+    left: 45%;
+  }
+
+  @include responsive(medium){
+    width: 55%;
+    left: 45%;
+  }
+
+  @include responsive(large) {
+    width: 50%;
+    left: 50%;
+  }
+
 }
 
 #searchResults {
@@ -62,25 +120,104 @@
   text-align: center;
   width: 1200px;
   margin: 0 auto;
+  justify-content: flex-start;
   @extend %center-element;
+
+  @include responsive(small) {
+    flex-direction: column;
+    font-size: 12px;
+    width: 95%;
+  }
+
+  @include responsive(medium) {
+    font-size: 14px;
+    margin: 0;
+    width: 100%;
+  }
+
+  @include responsive(large) {
+    font-size: 18px;
+    flex-direction: row;
+  }
+
 }
 
 #results {
+  width: 1200px;
+  max-width: 1200px;
   background-color: white;
+
+  @include responsive(small) {
+    width: 100%;
+  }
+
+  @include responsive(medium) {
+    width: 100%;
+  }
+
+  @include responsive(large) {
+    width: 100%;
+  }
+
 }
 
 .comic {
   display: inline-block;
-  width: 350px;
+  float: left;
+  width: 100%;
   height: auto;
   text-align: center;
   margin: 20px auto;
+  padding-left: 0.5em;
 
   img {
     display: block;
     margin: 0 auto;
     width: 300px;
     height: 250px;
+
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  p {
+    @include responsive(medium) {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include responsive(large) {
+      width: 100%
+    }
+  }
+
+  @include responsive(small) {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include responsive(medium) {
+    width: 50%;
+  }
+
+  @include responsive(large) {
+    width: 300px;
+    float: left;
+    display: inline-block;
+  }
+
+}
+
+.info {
+  text-align: center;
+  margin: auto;
+
+  @include responsive(large) {
+    width: 100%;
   }
 }
 
@@ -91,11 +228,35 @@
   margin: 0 auto;
   background-color: #00B4CC;
 
+  @include responsive(small) {
+    width: 100%;
+  }
 
   h2 {
     display: inline-block;
-    padding-top: 10px;
+    padding: 10px 0 0 20px;
     margin: 0 auto;
+    width: 100%;
+
+    @include responsive(small) {
+      width: 95%;
+      font-size: 16px;
+      padding: 15px 0 0 15px;
+    }
+
+    @include responsive(medium) {
+      padding: 15px 0 0 25px;
+    }
+
+    @include responsive(large) {
+      width: 100%;
+      font-size: 24px;
+      padding: 15px 0 0 25px;
+    }
+
   }
 
 }
+
+
+

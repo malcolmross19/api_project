@@ -1,3 +1,15 @@
+@mixin responsive($size) {
+  @if $size == small {
+    @media (min-width: 300px) { @content; }
+  }
+  @else if $size == medium {
+    @media (min-width: 600px) { @content; }
+  }
+  @else if $size == large {
+    @media (min-width: 800px) { @content; }
+  }
+}
+
 html {
   background-color: $neutral-color;
   font-family: $font-stack;
@@ -6,11 +18,45 @@ html {
 }
 
 body {
-  width: 80%;
   max-width: 1200px;
+  margin-top: 0;
   @extend %center-element;
+}
+
+#container {
+  @include responsive(small) {
+    width: 100%;
+  }
+
 }
 
 h3 {
   margin-bottom: 5px;
+}
+
+footer {
+  position: fixed;
+  background: black;
+  width: 1200px;
+  height: 50px;
+  bottom: 0;
+  text-align: center;
+  @extend %center-element;
+
+  p {
+    font-size: 14px;
+    color: #999;
+  }
+
+  @include responsive(small) {
+    width: 100%;
+  }
+
+  @include responsive(medium) {
+    width: 100%;
+  }
+
+  @include responsive(large) {
+    width: 1200px;
+  }
 }
