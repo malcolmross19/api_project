@@ -1,25 +1,100 @@
 // Navigation
 
+@mixin responsive($size) {
+  @if $size == small {
+    @media (min-width: 300px) { @content; }
+  }
+  @else if $size == medium {
+    @media (min-width: 600px) { @content; }
+  }
+  @else if $size == large {
+    @media (min-width: 800px) { @content; }
+  }
+}
+
 nav {
   background-color: black;
   width: 1200px;
   height: 50px;
   margin-top: 0;
   text-align: right;
+  position: relative;
 
-  ul {
-    list-style: none;
+  #mainMenu {
     display: inline-block;
     vertical-align: middle;
     margin-right: 15px;
+
+
+    @include responsive(small) {
+      display: none;
+    }
+
+
+    @include responsive(medium) {
+      display: inline-block;
+    }
 
     li {
       display: inline-block;
       margin: 0 .5em;
       color: white;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
 
   }
 
+  @include responsive(small) {
+    width: 100%;
+  }
+
+  @include responsive(large) {
+    width: 100%;
+  }
+
 }
 
+#menu {
+  max-height: 0;
+  background-color: black;
+  transition: max-height 0.2s ease-out;
+
+  img {
+    @include responsive(small) {
+      padding: 8px 25px 0 0;
+    }
+
+  }
+}
+
+#ul {
+  display: none;
+  list-style: none;
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  background-color: black;
+  top: 0;
+
+  ul {
+    float: right;
+    overflow: hidden;
+  }
+
+  li {
+    display: block;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+}
