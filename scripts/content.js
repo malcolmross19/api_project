@@ -25,7 +25,7 @@ searchForm.addEventListener('submit', function (e) {
 
         // Build query string with a template literal
         let url =
-            'https://cors-anywhere.herokuapp.com/http://gateway.marvel.com/v1/public/characters?nameStartsWith=' + 
+            'https://gateway.marvel.com/v1/public/characters?nameStartsWith=' + 
             query + '&limit=' + limit + '&apikey=' + publicKey;
 
         // Instantiate new instance of XHR object
